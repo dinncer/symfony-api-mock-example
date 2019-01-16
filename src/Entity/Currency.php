@@ -31,16 +31,26 @@ class Currency
      */
     private $gbp;
 
+    /**
+     * @return int
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return float
+     */
     public function getUsd(): ?float
     {
         return $this->usd;
     }
 
+    /**
+     * @param  float $usd
+     * @return float
+     */
     public function setUsd(float $usd): self
     {
         $this->usd = $usd;
@@ -48,11 +58,18 @@ class Currency
         return $this;
     }
 
+    /**
+     * @return float
+     */
     public function getEuro(): ?float
     {
         return $this->euro;
     }
 
+    /**
+     * @param  float $euro
+     * @return float
+     */
     public function setEuro(float $euro): self
     {
         $this->euro = $euro;
@@ -60,11 +77,18 @@ class Currency
         return $this;
     }
 
+    /**
+     * @return float
+     */
     public function getGbp(): ?float
     {
         return $this->gbp;
     }
 
+    /**
+     * @param  float $gbp
+     * @return float
+     */
     public function setGbp(float $gbp): self
     {
         $this->gbp = $gbp;

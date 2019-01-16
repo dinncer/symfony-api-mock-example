@@ -6,7 +6,7 @@ use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
 /**
- * Auto-generated Migration: Please modify to your needs!
+ * Run currency migrations.
  */
 final class Version20190116111334 extends AbstractMigration
 {

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Currency Table{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Currency Table</h1>
+        <div class="row">
+                <div class="col-sm">
+                    <div class="shadow p-3 mb-5 bg-white rounded"><i class="fa fa-usd" aria-hidden="true"></i> {{ exchangeRates.usd }}</div>
+                </div>
+                <div class="col-sm">
+                    <div class="shadow p-3 mb-5 bg-white rounded"><i class="fa fa-euro" aria-hidden="true"></i> {{ exchangeRates.euro }}</div>
+                </div>       
+                <div class="col-sm">
+                    <div class="shadow p-3 mb-5 bg-white rounded"><i class="fa fa-gbp" aria-hidden="true"></i> {{ exchangeRates.gbp }}</div>
+                </div>                        
+        </div>
+        <u>Display Time: {{ "now"|date() }}</u>
+    </div>
+{% endblock %}

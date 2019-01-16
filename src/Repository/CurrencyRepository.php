@@ -14,37 +14,25 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class CurrencyRepository extends ServiceEntityRepository
 {
+    /**
+     * @param RegistryInterface $registry
+     */
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Currency::class);
     }
 
-    // /**
-    //  * @return Currency[] Returns an array of Currency objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * The property for the lowest price.
+     *
+     * @return null
+     */
+    public function lowestPrice()
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Currency
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
+        return $this->createQueryBuilder('q')
+            ->select('q.id, MIN(q.usd) as usd, MIN(q.euro) as euro, MIN(q.gbp) as gbp')
             ->getQuery()
             ->getOneOrNullResult()
         ;
     }
-    */
 }
