@@ -76,14 +76,14 @@ class CurrencyCallCommand extends Command
      */
     protected function record($currencyList)
     {
-        $product = new Currency();
-        $product
+        $currency = new Currency();
+        $currency
             ->setUsd($currencyList->usd)
             ->setEuro($currencyList->euro)
             ->setGbp($currencyList->gbp)
             ;
 
-        $this->em->persist($product);
+        $this->em->persist($currency);
         $this->em->flush();
     }
 }
