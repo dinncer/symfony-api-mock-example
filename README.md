@@ -2,8 +2,9 @@
 
 Sample was developed with Symfony 4.2.
 
-### Requirements
+## Requirements
 
+- Symfony 4.2
 - PHP 7.1+
 - mySQL
 
